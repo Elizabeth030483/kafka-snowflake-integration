@@ -1,0 +1,11 @@
+# Kafka Configuration
+kafka.bootstrap.servers=<your-bootstrap-server>
+kafka.topic.name=<your-topic-name>
+kafka.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username='<your-username>' password='<your-password>';
+
+# Snowflake Configuration
+snowflake.jdbc.url=jdbc:snowflake://<your-account>.snowflakecomputing.com/?warehouse=<your-warehouse>&database=<your-database>&schema=<your-schema>
+snowflake.user=<your-snowflake-user>
+snowflake.password=<your-snowflake-password>
+snowflake.table.name=<your-table-name>
+snowflake.batch.size=100

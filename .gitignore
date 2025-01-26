@@ -32,7 +32,8 @@ gradle-app.setting
 hs_err_pid*
 
 # Application properties with sensitive data
-# src/main/resources/application.properties
+src/main/resources/application.properties
+!src/main/resources/application.properties.template
 
 # Python
 __pycache__/
