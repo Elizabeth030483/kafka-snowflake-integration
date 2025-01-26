@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.company'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://packages.confluent.io/maven"
+    }
+}
+
+dependencies {
+    // Kafka Streams
+    implementation 'org.apache.kafka:kafka-streams:3.5.1'
+    implementation 'org.apache.kafka:kafka-clients:3.5.1'
+    
+    // Snowflake Connector
+    implementation 'net.snowflake:snowflake-jdbc:3.14.4'
+    
+    // Logging
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+    
+    // JSON processing
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    
+    // Configuration
+    implementation 'com.typesafe:config:1.4.2'
+    
+    // Testing
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+
+application {
+    mainClass = 'com.company.KafkaSnowflakeStreaming'
+}
+
+test {
+    useJUnitPlatform()
+}
